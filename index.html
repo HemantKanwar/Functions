@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h2>
+        Q1 = > Create one function with zero parameter having a console statement.
+        <pre>
+            Ans : function printMessage() {
+                console.log("Hello World");
+              }
+              
+              printMessage(); 
+        </pre> 
+        
+        <br/>
+
+        Q2 = >Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7"	
+        <pre>
+            Ans : function printSum(a, b) {
+                var sum = a + b;
+                console.log("Sum of " + a + ", " + b + " is " + sum);
+              }
+              
+              printSum(3, 4); 
+        </pre>
+
+        <br/>
+
+        Q3 => Create one arrow function
+        <pre>
+            Ans : const multiply = (a, b) => a * b;
+
+            console.log(multiply(5, 3));
+        </pre>
+
+        <br/>
+
+        Q4 =>Print output: 
+        var x = 21;
+        var girl = function () {
+            console.log(x);
+            var x = 20;
+        };
+        girl ();
+        <pre>
+            Ans : The answer is undefined. Because  there is a concept called "hoisting" that affects 
+            the order in which variables and functions are declared and initialized in JavaScript.
+        </pre>
+
+        <br/>
+        Q5 =>Print output: 
+        var x = 21;
+        girl ();
+        console.log(x)
+        function girl() {
+            console.log(x);
+            var x = 20;
+        };
+        <pre>
+            Ans : The answer is undefined , 21 because var x =21 is defined but console
+             statement is after the girl function and in girl function the initialisation is not done before console so it is undefined.
+        </pre>
+
+        <br/>
+
+        Q6 => Print output<br/>
+
+        var x = 21;
+        a();
+        b();
+        
+          function a() {
+            
+           x = 20;
+          console.log(x);
+        };
+         function b() {
+            
+            x = 40;
+           console.log(x);
+        };
+        <pre>
+            Ans : The Output will be 20 ,40 . Both a() and b() modify the value of the global variable x, and then
+             they each print the updated value using console.log(). As a result, you get 20 printed when a() is called, 
+             and then 40 printed when b() is called.
+        </pre>
+
+        Q7 => Write a function that accepts parameter n and returns factorial of n.
+        <pre>
+            Ans : let number = 5;
+            let result = factorial(number);
+            
+            function factorial(n) {
+                if (n === 0 || n === 1) {
+                  return 1;
+                } else {
+                  return n * factorial(n - 1);
+                }
+              }
+            
+            console.log(`Factorial of ${number} is ${result}`);
+        </pre>
+
+        <br/>
+        Q8 =>Guess the Output
+        <br/>
+
+        function FindSum(a, b){   <br/>
+            return a + b;         <br/> 
+        }
+        
+        function DisplayData(data, batch){                                      <br/>
+            console.log(`i am from ${data} and My batch is EA${batch}`)          <br/>
+        }                                                                        <br/>
+        
+        DisplayData("PrepBytes", FindSum(10, 9));                                 <br/>
+        <pre>
+            Ans : I am from PrepBytes and My batch is EA19
+
+        </pre>
+
+        <br/>
+
+        Q9 =>"Guess the output <br/>
+
+        Abc();                 <br/>
+        const Abc = function(){<br/>
+            let value = 20;     <br/>
+            console.log(value);<br/>
+        }
+        <pre>
+            Ans: It prints "undefined" because we are not passing any argument to the function call. So it takes default value as undefined.
+        </pre>
+        <br/>
+
+        Q 10=>Guess the output<br/>
+
+        var a = 10;           <br/>
+        (function (){         <br/>
+            console.log(a);   <br/>
+            var a = 20;       <br/>
+        })();
+        <pre>
+            Ans : The Output will be undefined
+        </pre>
+        <br/>
+        Q 11 =>Guess the Output                       <br/>
+        const greet =  function(name){                <br/>
+            return function(m){                       <br/>
+            
+                console.log(`Hi!! ${name}, ${m}`);    <br/>
+            }                                         <br/>
+        }                                             <br/>
+                                                      <br/>
+        const greet_message = greet('EA19');          <br/>
+        greet_message(""Welcome To PrepBytes"")"      <br/>
+        <pre>
+            Ans : Hi!! EA19, Welcome To PrepBytes
+
+        </pre>
+    </h2>
+</body>
+</html>
